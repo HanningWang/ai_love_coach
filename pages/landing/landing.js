@@ -21,8 +21,10 @@ Page({
   },
 
   onUploadChat() {
-    // Implement chat upload functionality
-    console.log("Upload chat screenshot");
+    // Navigate to the upload page
+    tt.navigateTo({
+      url: '/pages/upload/upload'
+    });
   },
 
   onManualDialog() {

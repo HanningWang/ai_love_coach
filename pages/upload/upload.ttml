@@ -1,0 +1,46 @@
+<view class="container">
+  <!-- Header -->
+  <view class="header">
+    <view class="zap-icon"></view>
+    <text class="title">AI教恋</text>
+    <view class="placeholder"></view>
+  </view>
+
+  <!-- Conversation Screenshot -->
+  <view class="screenshot-container" bindtap="chooseImage">
+    <block tt:if="{{!imageUrl}}">
+      <view class="upload-placeholder">
+        <text class="upload-text">请上传您的对话截图</text>
+      </view>
+    </block>
+    <image tt:else src="{{imageUrl}}" mode="aspectFit" class="screenshot"></image>
+  </view>
+
+  <!-- Input Field -->
+  <view class="input-container">
+    <textarea 
+      placeholder="输入你的关键词或空着让教恋帮你" 
+      class="input-field {{inputLocked ? 'locked' : ''}}"
+      auto-height
+      maxlength="-1"
+      bindinput="handleInput"
+      value="{{inputText}}"
+      disabled="{{inputLocked}}"
+    ></textarea>
+  </view>
+
+  <!-- Results -->
+  <view tt:if="{{showResults}}" class="results-container">
+    <view tt:for="{{mockResults}}" tt:key="index" class="result-card">
+      <text>{{item}}</text>
+    </view>
+  </view>
+
+  <!-- Buttons -->
+  <view class="button-container">
+    <button bindtap="handleModeChange" class="mode-button {{modes[currentMode].class}}">
+      {{modes[currentMode].title}}
+    </button>
+    <button class="action-button" bindtap="handleAction">{{actionButtonText}}</button>
+  </view>
+</view>

@@ -22,14 +22,8 @@
   <view class="main-content">
     <view class="tabs">
       <view class="tab-list">
-        <view class="tab-item {{activeTab === 'love-dialogue' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-dialogue">
-          <image src="/assets/heart.png" class="tab-icon" />
-          <text>恋爱对话</text>
-        </view>
-        <view class="tab-item {{activeTab === 'love-words' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-words">
-          <image src="/assets/book.png" class="tab-icon" />
-          <text>情话宝典</text>
-        </view>
+        <view class="tab-item {{activeTab === 'love-dialogue' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-dialogue">恋爱对话</view>
+        <view class="tab-item {{activeTab === 'love-words' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-words">情话宝典</view>
       </view>
       <view class="tab-content">
         <view tt:if="{{activeTab === 'love-dialogue'}}" class="love-dialogue">

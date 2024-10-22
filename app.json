@@ -1,6 +1,8 @@
 {
   "pages":[
-    "pages/landing/landing"
+    "pages/landing/landing",
+    "pages/upload/upload"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

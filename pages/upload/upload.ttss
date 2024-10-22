@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: 750rpx;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.zap-icon {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: #3b82f6;
+  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>');
+  mask-size: cover;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.placeholder {
+  width: 48rpx;
+}
+
+.screenshot-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.upload-placeholder {
+  width: 55%;
+  aspect-ratio: 3 / 4;
+  background-color: #f0f0f0;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-text {
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  border-radius: 16rpx;
+}
+
+.input-container {
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.input-field {
+  width: 75%;
+  max-height: 200rpx;
+  padding: 20rpx;
+  font-size: 18px;
+  border-radius: 11px;
+  border: 1px solid rgba(187,187,187,1);
+  line-height: 1.4;
+}
+
+.input-field.locked {
+  color: #DE868F;
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-container {
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+  border-radius: 11px;
+  gap: 16rpx;
+  align-self: center;
+  width: 75%;
+  padding-bottom: 50rpx;
+}
+
+.mode-button, .action-button {
+  height: 92rpx;
+  border: none;
+  border-radius: 8rpx;
+  font-size: 36rpx;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mode-button {
+  font-size: 32rpx;
+  width: 40%;
+}
+
+.action-button {
+  background-color: #101010;
+  font-size: 50rpx;
+  width: 60%;
+}
+
+/* Updated mode button styles */
+.love-coach {
+  background-image: linear-gradient(to right, black, #4095E5);
+}
+
+.emotion-analysis {
+  background-image: linear-gradient(to right, black, #BD3124);
+}
+
+.conversation-suggestion {
+  background-image: linear-gradient(to right, #BFBF3D, #54BCBD, #0F40F5, #BD3124);
+}
+
+/* New styles for results */
+.results-container {
+  width: 75%;
+  margin: 20rpx auto;
+}
+
+.result-card {
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.13);
+}
