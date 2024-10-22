@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- Header -->
+  <view class="header">
+    <view class="header-text">
+      <text class="title">AI教恋</text>
+      <text class="hello">Hello</text>
+      <text class="username">发霉的馒头</text>
+      <text class="user-status">@恋爱新人</text>
+    </view>
+    <view class="user-info">
+      <view class="diamond-container">
+        <text class="diamond-count">10</text>
+        <image src="/assets/diamond.png" class="diamond-icon" />
+      </view>
+      <button class="more-button">
+        <icon type="more" size="20" />
+      </button>
+    </view>
+  </view>
+
+  <!-- Main content -->
+  <view class="main-content">
+    <view class="tabs">
+      <view class="tab-list">
+        <view class="tab-item {{activeTab === 'love-dialogue' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-dialogue">
+          <image src="/assets/heart.png" class="tab-icon" />
+          <text>恋爱对话</text>
+        </view>
+        <view class="tab-item {{activeTab === 'love-words' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-words">
+          <image src="/assets/book.png" class="tab-icon" />
+          <text>情话宝典</text>
+        </view>
+      </view>
+      <view class="tab-content">
+        <view tt:if="{{activeTab === 'love-dialogue'}}" class="love-dialogue">
+          <view class="dialogue-item">
+            <text class="dialogue-name">夏雨荷</text>
+            <text class="dialogue-text">你觉得我可爱吗？</text>
+          </view>
+          <view class="dialogue-item">
+            <text class="dialogue-name">随机</text>
+            <text class="dialogue-text">你知道我的缺点是什么吗？是缺点你。</text>
+          </view>
+        </view>
+        <view tt:if="{{activeTab === 'love-words'}}" class="love-words">
+          <view class="category-grid">
+            <view tt:for="{{categories}}" tt:key="index" class="category-item">
+              <text class="category-emoji">{{categoryEmojis[item]}}</text>
+              <text class="category-name">{{item}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Footer -->
+  <view class="footer {{activeTab === 'love-words' ? 'hidden' : ''}}">
+    <button class="upload-button" bindtap="onUploadChat">上传聊天截图</button>
+    <button class="manual-button" bindtap="onManualDialog">手动对话</button>
+  </view>
+</view>
