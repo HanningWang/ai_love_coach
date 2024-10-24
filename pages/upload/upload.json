@@ -1,3 +1,5 @@
 {
-    "usingComponents": {}
+    "usingComponents": {},
+    "navigationBarLeftButton": false,
+    "navigationBarBackgroundColor": "#ffffff"
 }

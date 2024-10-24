@@ -4,9 +4,9 @@ Page({
     inputText: '',
     currentMode: 0,
     modes: [
-      { title: '绅士模式', class: 'love-coach' },
-      { title: '恋爱达人', class: 'emotion-analysis' },
-      { title: '直击灵魂', class: 'conversation-suggestion' }
+      { title: '绅士模式', class: 'love-coach', icon: 'gentle' },
+      { title: '恋爱达人', class: 'emotion-analysis', icon: 'expert' },
+      { title: '直击灵魂', class: 'conversation-suggestion', icon: 'soul' }
     ],
     mockResults: [
       "这是第一条建议，可能会有两到三行的文字内容。建议要有针对性和实用性。",
@@ -18,7 +18,20 @@ Page({
     actionButtonText: '教恋一下'
   },
 
+  onLoad(options) {
+    console.log('hello')
+    console.log(options.imageUrl);
+    if (options.imageUrl) {
+      this.setData({
+        imageUrl: decodeURIComponent(options.imageUrl)
+      });
+    }
+  },
+
   chooseImage() {
+    if (this.data.imageUrl) {
+      return; // Don't open album if image is already uploaded
+    }
     tt.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],

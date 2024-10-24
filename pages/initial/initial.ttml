@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="content">
+    <view class="image-container">
+      <view class="circle-background"></view>
+      <image src="/assets/coach.png" mode="aspectFit" class="avatar"></image>
+    </view>
+    <view class="text-center">
+      <text class="title">教恋</text>
+      <text class="subtitle">Love Coach</text>
+      <text class="description">你的AI恋爱教练</text>
+    </view>
+    <view class="button-container">
+      <view class="upload-button" bindtap="navigateToUpload">上传聊天截图</view>
+      <view class="action-button" bindtap="navigateToManualChat">
+        <image src="/assets/pen.png" mode="aspectFit" class="button-icon"></image>
+        <text>手动对话</text>
+        <image src="/images/zap.png" mode="aspectFit" class="icon"></image>
+      </view>
+      <view class="action-button" bindtap="navigateToLoveQuotes">
+        <image src="/assets/book.png" mode="aspectFit" class="button-icon"></image>
+        <text>情话宝典</text>
+        <image src="/images/zap.png" mode="aspectFit" class="icon"></image>
+      </view>
+    </view>
+  </view>
+</view>

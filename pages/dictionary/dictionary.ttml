@@ -1,0 +1,38 @@
+<view class="container">
+    <!-- Header -->
+    <view class="header">
+      <view class="zap-icon"></view>
+      <text class="title">AI教恋</text>
+      <view class="placeholder"></view>
+    </view>
+  
+    <!-- Input Field -->
+    <view class="input-container">
+      <textarea 
+        placeholder="输入你的关键词或空着让教恋帮你" 
+        class="input-field {{inputLocked ? 'locked' : ''}}"
+        auto-height
+        maxlength="-1"
+        bindinput="handleInput"
+        value="{{inputText}}"
+        disabled="{{inputLocked}}"
+      ></textarea>
+    </view>
+  
+    <!-- Results -->
+    <view tt:if="{{showResults}}" class="results-container">
+      <view tt:for="{{mockResults}}" tt:key="index" class="result-card">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  
+    <!-- Buttons -->
+    <view class="button-container">
+      <button bindtap="handleModeChange" class="mode-button {{modes[currentMode].class}}">
+        <image src="/assets/{{modes[currentMode].icon}}.png" class="mode-icon"></image>
+        <text class="mode-text">{{modes[currentMode].title}}</text>
+      </button>
+      <button class="action-button" bindtap="handleAction">{{actionButtonText}}</button>
+    </view>
+  </view>
+  

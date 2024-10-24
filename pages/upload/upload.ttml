@@ -7,13 +7,8 @@
   </view>
 
   <!-- Conversation Screenshot -->
-  <view class="screenshot-container" bindtap="chooseImage">
-    <block tt:if="{{!imageUrl}}">
-      <view class="upload-placeholder">
-        <text class="upload-text">请上传您的对话截图</text>
-      </view>
-    </block>
-    <image tt:else src="{{imageUrl}}" mode="aspectFit" class="screenshot"></image>
+  <view class="screenshot-container {{imageUrl ? 'with-image' : ''}}">
+    <image src="{{imageUrl}}" mode="aspectFit" class="screenshot"></image>
   </view>
 
   <!-- Input Field -->
@@ -39,7 +34,8 @@
   <!-- Buttons -->
   <view class="button-container">
     <button bindtap="handleModeChange" class="mode-button {{modes[currentMode].class}}">
-      {{modes[currentMode].title}}
+      <image src="/assets/{{modes[currentMode].icon}}.png" class="mode-icon"></image>
+      <text class="mode-text">{{modes[currentMode].title}}</text>
     </button>
     <button class="action-button" bindtap="handleAction">{{actionButtonText}}</button>
   </view>

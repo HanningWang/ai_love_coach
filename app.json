@@ -1,13 +1,14 @@
 {
-  "pages":[
-    "pages/landing/landing",
-    "pages/upload/upload"
-    
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Mini Program",
-    "navigationBarTextStyle":"black"
-  }
+    "pages": [
+        "pages/initial/initial",
+        "pages/landing/landing",
+        "pages/upload/upload",
+        "pages/dictionary/dictionary"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Mini Program",
+        "navigationBarTextStyle": "black"
+    }
 }

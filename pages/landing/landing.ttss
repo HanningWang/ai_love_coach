@@ -87,6 +87,9 @@
 }
 
 .tab-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
   text-align: center;
   padding: 12px;
@@ -95,6 +98,12 @@
 
 .tab-item.active {
   border-bottom-color: #591BB7;
+}
+
+.tab-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 .tab-content {
@@ -122,10 +131,36 @@
   color: #4B5563;
 }
 
-.love-words .category-grid {
+.love-words {
+  padding: 16px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 16px;
+  height: 120px;
+}
+
+.grid-item image {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.grid-item text {
+  font-size: 16px;
+  text-align: center;
 }
 
 .category-item {
@@ -136,15 +171,18 @@
   justify-content: center;
   border: 1px solid #D1D5DB;
   border-radius: 8px;
+  padding: 8px;
 }
 
-.category-emoji {
-  font-size: 24px;
+.category-icon {
+  width: 40px;
+  height: 40px;
   margin-bottom: 8px;
 }
 
 .category-name {
   font-size: 14px;
+  text-align: center;
 }
 
 .footer {

@@ -35,21 +35,11 @@
 }
 
 .screenshot-container {
-  flex: 1;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-}
-
-.upload-placeholder {
-  width: 55%;
-  aspect-ratio: 3 / 4;
-  background-color: #f0f0f0;
-  border-radius: 16rpx;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 20px; /* Reduced margin before image upload */
 }
 
 .upload-text {
@@ -60,10 +50,8 @@
 
 .screenshot {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
+  height: 60vh;
   object-fit: contain;
-  border-radius: 16rpx;
 }
 
 .input-container {
@@ -114,8 +102,35 @@
 }
 
 .mode-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92rpx;
+  border: none;
+  border-radius: 8rpx;
   font-size: 32rpx;
+  color: white;
   width: 40%;
+  overflow: hidden;
+  padding: 0 16rpx;
+}
+
+.mode-icon {
+  position: absolute;
+  left: 16rpx;
+  width: 48rpx;
+  height: 48rpx;
+  opacity: 0.7;
+}
+
+.mode-text {
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .action-button {
@@ -149,4 +164,20 @@
   padding: 20rpx;
   margin-bottom: 20rpx;
   box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.13);
+}
+
+.mode-button-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mode-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.mode-button {
+  flex: 1;
 }

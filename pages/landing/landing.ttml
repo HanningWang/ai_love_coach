@@ -22,8 +22,14 @@
   <view class="main-content">
     <view class="tabs">
       <view class="tab-list">
-        <view class="tab-item {{activeTab === 'love-dialogue' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-dialogue">恋爱对话</view>
-        <view class="tab-item {{activeTab === 'love-words' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-words">情话宝典</view>
+        <view class="tab-item {{activeTab === 'love-dialogue' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-dialogue">
+          <image src="/assets/heart.png" class="tab-icon" />
+          <text>恋爱对话</text>
+        </view>
+        <view class="tab-item {{activeTab === 'love-words' ? 'active' : ''}}" bindtap="onTabChange" data-tab="love-words">
+          <image src="/assets/book.png" class="tab-icon" />
+          <text>情话宝典</text>
+        </view>
       </view>
       <view class="tab-content">
         <view tt:if="{{activeTab === 'love-dialogue'}}" class="love-dialogue">
@@ -37,10 +43,10 @@
           </view>
         </view>
         <view tt:if="{{activeTab === 'love-words'}}" class="love-words">
-          <view class="category-grid">
-            <view tt:for="{{categories}}" tt:key="index" class="category-item">
-              <text class="category-emoji">{{categoryEmojis[item]}}</text>
-              <text class="category-name">{{item}}</text>
+          <view class="grid">
+            <view class="grid-item" tt:for="{{loveWords}}" tt:key="index" bindtap="navigateToDictionary" data-category="{{item.text}}" data-src="{{item.src}}">
+              <image src="{{item.src}}" mode="aspectFit" />
+              <text>{{item.text}}</text>
             </view>
           </view>
         </view>
